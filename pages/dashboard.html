@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
+    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
+    <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
+    <title>InvestPro - Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="icon" href="../assets/imgs/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/dashboard.js" defer></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="googlebot" content="noindex, noarchive, nosnippet">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item" title="Início">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Início</span>
+            </a>
+            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="menu-text">InvestPro Academy</span>
+            </a>
+            <a href="investpro_news.html" class="menu-item" title="InvestPro News">
+                <i class="fas fa-newspaper"></i>
+                <span class="menu-text">InvestPro News</span>
+            </a>
+            <a href="investment_panel.html" class="menu-item" title="Painel de Investimento">
+                <i class="fas fa-chart-line"></i>
+                <span class="menu-text">Painel de Investimento</span>
+            </a>
+            <a href="profile_page.html" class="menu-item" title="Página de Perfil">
+                <i class="fas fa-user"></i>
+                <span class="menu-text">Página de Perfil</span>
+            </a>
+        </div>
+        <div class="sidebar-footer">
+            <a href="subpages/help_page.html" class="menu-item" title="Ajuda">
+                <i class="fas fa-question-circle"></i>
+                <span class="menu-text">Ajuda</span>
+            </a>
+            <a href="#" id="logout" class="menu-item" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="menu-text">Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Resumo do Portfólio</h5>
+                            <p class="card-text">Total Investido: R$ 100.000,00</p>
+                            <p class="card-text">Lucro/Prejuízo: R$ 10.000,00</p>
+                            <p class="card-text">Rendimento Mensal: R$ 1.000,00</p>
+                            <p class="card-text">Média de Retorno: 10%</p>
+                            <p class="card-text">Diversificação do Portfólio:</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70% Ações</div>
+                            </div>
+                            <div class="progress mt-2">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20% Criptomoedas</div>
+                            </div>
+                            <div class="progress mt-2">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10% Outros</div>
+                            </div>
+                            <h6 class="card-text mt-3">Investimentos Recentes:</h6>
+                            <ul class="list-unstyled">
+                                <li>Compra de Ação MXRF11 - R$ 5.000,00</li>
+                                <li>Venda de Criptomoeda Bitcoin - R$ 2.000,00</li>
+                                <li>Compra de Título DEF - R$ 10.000,00</li>
+                            </ul>
+                            <h6 class="card-text">Retornos por Tipo de Investimento:</h6>
+                            <ul class="list-unstyled">
+                                <li>Ações: R$ 7.000,00</li>
+                                <li>Criptomoedas: R$ 2.000,00</li>
+                                <li>Outros: R$ 1.000,00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="performanceChart" class="chart-canvas"></canvas>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Notícias Relevantes</h5>
+                            <ul class="list-unstyled">
+                                <li>Criptomoedas Alternativas Ganhando Popularidade Além do Bitcoin</li>
+                                <li>Investimentos em Renda Fixa: Uma Análise de Riscos e Oportunidades</li>
+                                <li>Crise Bancária Estimula Crescimento no Uso de Criptomoedas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Transações Recentes</h5>
+                            <ul class="list-unstyled">
+                                <li>Compra de Ação - R$ 5.000,00</li>
+                                <li>Venda de Criptomoeda - R$ 2.000,00</li>
+                                <li>Compra de Título - R$ 10.000,00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

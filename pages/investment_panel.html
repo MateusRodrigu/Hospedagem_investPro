@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
+    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
+    <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
+    <title>InvestPro - Painel de Investimentos</title>
+    <link rel="stylesheet" href="../assets/css/investment_panel.css">
+    <link rel="icon" href="../assets/imgs/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/investment_panel.js" defer></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="googlebot" content="noindex, noarchive, nosnippet">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item" title="Início">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Início</span>
+            </a>
+            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="menu-text">InvestPro Academy</span>
+            </a>
+            <a href="investpro_news.html" class="menu-item" title="InvestPro News">
+                <i class="fas fa-newspaper"></i>
+                <span class="menu-text">InvestPro News</span>
+            </a>
+            <a href="investment_panel.html" class="menu-item" title="Painel de Investimento">
+                <i class="fas fa-chart-line"></i>
+                <span class="menu-text">Painel de Investimento</span>
+            </a>
+            <a href="profile_page.html" class="menu-item" title="Página de Perfil">
+                <i class="fas fa-user"></i>
+                <span class="menu-text">Página de Perfil</span>
+            </a>
+        </div>
+        <div class="sidebar-footer">
+            <a href="subpages/help_page.html" class="menu-item" title="Ajuda">
+                <i class="fas fa-question-circle"></i>
+                <span class="menu-text">Ajuda</span>
+            </a>
+            <a href="#" id="logout" class="menu-item" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="menu-text">Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <h1>Painel de Investimento</h1>
+
+        <div class="investment-summary">
+            <h2>Resumo dos Investimentos</h2>
+            <div class="summary-details">
+                <div class="detail-item">
+                    <h3>Valorização</h3>
+                    <p id="valuation">Carregando...</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Desvalorização</h3>
+                    <p id="depreciation">Carregando...</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Rendimento Total</h3>
+                    <p id="total-return">Carregando...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="investment-charts">
+            <h2>Gráficos de Investimento</h2>
+
+            <div id="organize">
+                <div id="ladoesq">
+                    <div class="chart-container">
+                        <h3>Desempenho Mensal</h3>
+                        <canvas id="performanceChart" width="880" height="680"></canvas>
+                    </div>
+                </div>
+    
+                <div id="ladodir">
+                    <div id="cima">
+                        <div class="chart-container">
+                            <h3>Distribuição de Ativos</h3>
+                            <canvas id="assetDistributionChart"></canvas>
+                        </div>
+            
+                        <div class="chart-container">
+                            <h3>Alocação de Portfólio</h3>
+                            <canvas id="portfolioAllocationChart"></canvas>
+                        </div>
+                    </div>
+    
+                    <div id="baixo">
+                        <div class="chart-container">
+                            <h3>Variação Semanal</h3>
+                            <canvas id="weeklyVariationChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="performance-indicators">
+            <h2>Indicadores de Performance</h2>
+            <div class="indicator-item">
+                <h3>Taxa de Crescimento Anual</h3>
+                <p id="annualGrowthRate">Carregando...</p>
+            </div>
+            <div class="indicator-item">
+                <h3>Retorno sobre Investimento (ROI)</h3>
+                <p id="roi">Carregando...</p>
+            </div>
+        </div>
+
+        <div class="expenses-container">
+            <h2>Controle Financeiro</h2>
+            <div class="form-and-chart">
+                <form id="expense-form">
+                    <label for="transaction-date">Data da Transação:</label>
+                    <input type="date" id="transaction-date" name="transaction-date" required>
+        
+                    <label for="transaction-type">Tipo de Transação:</label>
+                    <select id="transaction-type" name="transaction-type" required>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Saída">Saída</option>
+                    </select>
+        
+                    <label for="transaction-amount">Valor:</label>
+                    <input type="number" id="transaction-amount" name="transaction-amount" required>
+        
+                    <label for="bank">Banco:</label>
+                    <input type="text" id="bank" name="bank" required>
+        
+                    <button type="submit">Adicionar Transação</button>
+                </form>
+        
+                <canvas id="expenses-chart" width="400" height="200"></canvas>
+            </div>
+        
+            <table id="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Entrada/Saída</th>
+                        <th>Valor da Aplicação/Retirada</th>
+                        <th>Valor Total</th>
+                        <th>Positivo/Negativo</th>
+                        <th>Banco</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

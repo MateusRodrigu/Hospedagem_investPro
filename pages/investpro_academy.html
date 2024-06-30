@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse a InvestPro Academy para aprender sobre investimentos e finanças pessoais.">
+    <meta name="keywords" content="investimentos, academy, InvestPro, finanças, cursos">
+    <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
+    <title>InvestPro Academy</title>
+    <link rel="stylesheet" href="../assets/css/investpro_academy.css">
+    <link rel="icon" href="../assets/imgs/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/investpro_academy.js" defer></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="googlebot" content="noindex, noarchive, nosnippet">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item" title="Início">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Início</span>
+            </a>
+            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="menu-text">InvestPro Academy</span>
+            </a>
+            <a href="investpro_news.html" class="menu-item" title="InvestPro News">
+                <i class="fas fa-newspaper"></i>
+                <span class="menu-text">InvestPro News</span>
+            </a>
+            <a href="investment_panel.html" class="menu-item" title="Painel de Investimento">
+                <i class="fas fa-chart-line"></i>
+                <span class="menu-text">Painel de Investimento</span>
+            </a>
+            <a href="profile_page.html" class="menu-item" title="Página de Perfil">
+                <i class="fas fa-user"></i>
+                <span class="menu-text">Página de Perfil</span>
+            </a>
+        </div>
+        <div class="sidebar-footer">
+            <a href="subpages/help_page.html" class="menu-item" title="Ajuda">
+                <i class="fas fa-question-circle"></i>
+                <span class="menu-text">Ajuda</span>
+            </a>
+            <a href="#" id="logout" class="menu-item" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="menu-text">Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <header class="header">
+            <h1>InvestPro Academy</h1>
+        </header>
+        <main class="main-content">
+            <section class="filter-buttons">
+                <button class="filter-btn" data-filter="all">Todos os cursos</button>
+                <button class="filter-btn" data-filter="basic-investments">Investimentos Básicos</button>
+                <button class="filter-btn" data-filter="stocks-variable-income">Ações e Renda Variável</button>
+                <button class="filter-btn" data-filter="real-estate">Investimentos Imobiliários</button>
+                <button class="filter-btn" data-filter="cryptocurrencies">Criptomoedas</button>
+                <button class="filter-btn" data-filter="retirement-planning">Planejamento de Aposentadoria</button>
+                <button class="filter-btn" data-filter="advanced-investing">Investimentos Avançados</button>
+            </section>
+                        
+
+            <section class="course-category" data-category="courses">
+                <div class="course-grid">
+                    <div class="course-card basic-investments">
+                        <h3>Investimentos Básicos</h3>
+                        <p>Aprenda os fundamentos dos investimentos e comece a construir sua carteira.</p>
+                    </div>
+                    <div class="course-card stocks-variable-income advanced-investing">
+                        <h3>Ações e Renda Variável</h3>
+                        <p>Domine o mercado de ações e outras formas de renda variável.</p>
+                    </div>
+                    <div class="course-card real-estate advanced-investing">
+                        <h3>Investimentos Imobiliários</h3>
+                        <p>Saiba como investir em imóveis de maneira eficiente e lucrativa.</p>
+                    </div>
+                    <div class="course-card cryptocurrencies stocks-variable-income advanced-investing">
+                        <h3>Criptomoedas</h3>
+                        <p>Explore o mundo das criptomoedas e descubra como investir nesse mercado emergente.</p>
+                    </div>
+                    <div class="course-card retirement-planning basic-investments">
+                        <h3>Planejamento de Aposentadoria</h3>
+                        <p>Planeje sua aposentadoria e assegure um futuro financeiro estável.</p>
+                    </div>
+                    <div class="course-card advanced-investing">
+                        <h3>Investimentos Avançados</h3>
+                        <p>Amplie seu conhecimento com estratégias avançadas de investimento.</p>
+                    </div>                    
+                    <div class="course-card stocks-variable-income advanced-investing">
+                        <h3>Mercado Financeiro</h3>
+                        <p>Entenda o funcionamento do mercado financeiro e suas principais operações.</p>
+                    </div>
+                    <div class="course-card real-estate advanced-investing">
+                        <h3>Fundos Imobiliários</h3>
+                        <p>Descubra como investir em fundos imobiliários de forma eficiente.</p>
+                    </div>
+                    <div class="course-card cryptocurrencies stocks-variable-income advanced-investing">
+                        <h3>Economia Digital</h3>
+                        <p>Explore os conceitos da economia digital e seu impacto no mundo financeiro.</p>
+                    </div>
+                    <div class="course-card retirement-planning basic-investments">
+                        <h3>Planejamento Financeiro</h3>
+                        <p>Crie um planejamento financeiro eficiente para alcançar seus objetivos.</p>
+                    </div>
+                    <div class="course-card advanced-investing">
+                        <h3>Gestão de Patrimônio</h3>
+                        <p>Saiba como gerir e multiplicar seu patrimônio de forma eficaz.</p>
+                    </div>
+                    <div class="course-card advanced-investing">
+                        <h3>Finanças Corporativas</h3>
+                        <p>Explore as finanças corporativas e como elas impactam os negócios.</p>
+                    </div>
+                    <div class="course-card advanced-investing cryptocurrencies">
+                        <h3>Tecnologia em Investimentos</h3>
+                        <p>Descubra as tecnologias que estão transformando o mundo dos investimentos.</p>
+                    </div>
+                    <div class="course-card basic-investments advanced-investing">
+                        <h3>Investimentos Sustentáveis</h3>
+                        <p>Saiba como investir de forma sustentável e responsável.</p>
+                    </div>
+                    <div class="course-card stocks-variable-income advanced-investing">
+                        <h3>Trading e Operações de Curto Prazo</h3>
+                        <p>Aprenda as técnicas de trading e operações de curto prazo.</p>
+                    </div>
+                    <div class="course-card advanced-investing">
+                        <h3>Investimentos em Derivativos</h3>
+                        <p>Descubra estratégias avançadas usando opções e futuros para ampliar seus investimentos e gerenciar riscos.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
